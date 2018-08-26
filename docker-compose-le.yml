@@ -1,7 +1,7 @@
 parse-server:
-  #build: .
-  #official parse serve repo
-  image: parseplatform/parse-server
+  build: .
+  #official parse serve repo, need command params
+  #image: parseplatform/parse-server
   ports:
     - "1337:1337"
   environment:
@@ -102,7 +102,7 @@ parse-cloud-code:
   command: "ls /parse/cloud"
 
 mongo:
-  image: mongo:3.0.8 # ref. https://github.com/ParsePlatform/parse-server/issues/1913
+  image: mongo # ref. https://github.com/ParsePlatform/parse-server/issues/1913
   ports:
     - "27017:27017"
   volumes_from:
